@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="shortcut icon" href="{{{ asset('favicon.ico') }}}">  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">    
     <!-- Tell the browser to be responsive to screen width -->
@@ -449,8 +450,8 @@
      var marker = null;  
      function initialize() {  
        var mapOptions = {  
-         center: new google.maps.LatLng(-6.175486, 106.825407),  
-         zoom: 15  
+         center: new google.maps.LatLng(-6.25609, 106.870242),  
+         zoom: 18  
        };  
        var map = new google.maps.Map(document.getElementById("map-canvas"),  
            mapOptions);  

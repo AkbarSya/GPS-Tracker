@@ -41,6 +41,12 @@ Route::group(['middleware' => ['web']], function() {
 	Route::post('Input','InputController@postInput');	
 	Route::get('ismail','MailController@ImapEmail');
 
+	Route::get('/api/login', 'ApiController@login');
+	Route::get('/api/logout','ApiController@logout');
+	Route::get('/api/simpanlokasi','ApiController@simpanlokasi');
+	Route::get('/api/ambillokasi','ApiController@ambilLokasi');
+
+
 
 // 	Route::get('/mandrill',function ()
 // {

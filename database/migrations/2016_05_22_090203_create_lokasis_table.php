@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePoolsTable extends Migration
+class CreateLokasisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreatePoolsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pools', function (Blueprint $table) {
+        Schema::create('lokasis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama_driver');
-            $table->string('status_driver');
-            $table->string('status');
-            $table->text('update_stat');
+            $table->integer('id_driver');
+            $table->string('lat');
+            $table->string('lon');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreatePoolsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('pools');
+        Schema::drop('lokasis');
     }
 }

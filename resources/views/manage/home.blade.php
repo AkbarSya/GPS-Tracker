@@ -1,5 +1,6 @@
     @extends('skeleton.skeleton')
     @section('content')
+    
     <title>GPS Tracker | Home</title>
     <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
