@@ -164,6 +164,7 @@
                 <div class="box-body">
                 <form action="{{url('pool')}}" method="post">
                 {!! csrf_field() !!}
+                <input type="hidden" name="email" value="{{Auth::user()->email}}">
                   <div class="form-group">
                     <input type="hidden" name="nama_driver" value="{{Auth::user()->name}}">
                   </div>
@@ -173,8 +174,8 @@
                     <div class="form-group">
                       <label>Keterangan</label>
                       <select class="form-control" name="status">
-                        <option>Konfirmasi</option>
-                        <option>Permasalahan</option>                        
+                        <option value="konfirmasi">Konfirmasi</option>
+                        <option value="0">Permasalahan</option>                        
                       </select>
                     </div>                                    
                   <div class="form-group">

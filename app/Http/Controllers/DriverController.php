@@ -41,7 +41,31 @@ class DriverController extends Controller
         $pool->status_driver = $r->status_driver;
         $pool->status = $r->status;
         $pool->update_stat = $r->update_stat;        
-        $pool->save();        
-        return redirect('pool');
+        $pool->save();    
+
+        if ($r->status == "konfirmasi") {
+            $patokan = \App\User::where('email', $r->email)->first();
+            $driver = Driver::where('email',$patokan->email)->first();
+            $driver->status = "READY";
+            $driver->save();
+
+            return redirect('pool');
+        }
+        else 
+        {
+            
+
+        // if ($r->status == "konfirmasi") {
+        // $driver = Driver::find($r->driver_id);
+        // $driver->status = 'READY';
+        // $driver->save();    
+        // return redirect('pool');
+        // }else{
+
+        // return redirect('pool');    
+        
+        // }
+        
     }
+}
 }

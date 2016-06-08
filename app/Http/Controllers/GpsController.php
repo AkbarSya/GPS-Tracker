@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Input;
+use App\Lokasi;
 
 class GpsController extends Controller
 {
@@ -18,6 +19,10 @@ class GpsController extends Controller
 
  	public function getGps()
  	{ 		
- 		return view('manage.gps', ['input' => Input::paginate(5)]);
+ 		$maps = Lokasi::orderBy('id','desc')->paginate(100);
+ 		$input = Input::orderBy('id','desc')->paginate(10);
+ 		return view('manage.gps')->with('input', $input)->with('maps', $maps);
+
+
  	}
 }

@@ -1,13 +1,14 @@
     @extends('skeleton.skeleton')
     @section('content')
     <title>GPS Tracker | Status Driver</title>
+
+    
+    
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">  
         <div style="border: 1px; padding: 50px;" >  
            <div id="map-canvas" />  
-        </div>  
-         <div style=" padding: 10px;" >latitude : <input name="_lat" id="_lat" type="text" value="-6.2560672" /></div>  
-         <div style=" padding: 10px;" >longitude : <input name="_lng" id="_lng" type="text" value="106.8692862" /></div>           
+        </div> 
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
